@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
+import Main from './components/Main';
 import './html/css/animate.css'
 import './html/css/bootstrap.min.css'
 import './html/css/flatpickr.min.css'
@@ -23,7 +24,9 @@ function App() {
           <Header/>
         </header>
       </div>
-      
+      <main>
+        <Main/>
+      </main>
     </div>
   );
 }
