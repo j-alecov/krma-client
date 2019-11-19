@@ -14,23 +14,17 @@ import './../html/css/responsive.css'
 import './../html/css/style.css'
 
 
-class UserProfile extends React.Component{
-    
-    render(){
+class PostMidSection extends React.Component{
+
+    render() {
         return (
-            <div  className="user-profile">
-				<div className="username-dt">
-					<div className="usr-pic">
-						<img src="http://via.placeholder.com/100x100" alt=""/>
-					</div>
-				</div>
-				<div className="user-specs">
-					<h3>John Doe</h3>
-					<span>Graphic Designer at Self Employed</span>
-				</div>
+            <div class="epi-sec">
+				<ul class="descp">
+					<li><img src="images/icon8.png" alt=""/><span>{this.props.rango}</span></li>
+				</ul>
 			</div>
         );
-    }
+      }
 }
 
-export default UserProfile;
+export default PostMidSection;

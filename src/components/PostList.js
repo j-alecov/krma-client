@@ -13,19 +13,38 @@ import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
 import Post from './Post';
+import Axios from 'axios';
 
 
 class PostList extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            posts: []
+        }
+    }
+
+    addPost = (post) =>{
+        const newPost = {
+            //post properties
+        }
+        this.setState({posts: [...this.state.posts, newPost]});
+    }
+
+    componentDidMount(){
+        Axios.get('api/posts').then(res=>this.setState({posts:res.data}))
+    }
+
     posts(){
-        return this.props.posts.map(function(post) {
+        return this.state.posts.map(function(post) {
             return <Post key={post.response_id} post={post}/>
         });
     }
 
     render(){
         return (
-            <div className="user-picy">
-				<img src="http://via.placeholder.com/100x100" alt=""/>
+            <div>
+				{this.posts()}
 			</div>
         );
     }

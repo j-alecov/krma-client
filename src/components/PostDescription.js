@@ -14,23 +14,21 @@ import './../html/css/responsive.css'
 import './../html/css/style.css'
 
 
-class UserProfile extends React.Component{
-    
-    render(){
+class PostDescription extends React.Component{
+
+    render() {
         return (
-            <div  className="user-profile">
-				<div className="username-dt">
-					<div className="usr-pic">
-						<img src="http://via.placeholder.com/100x100" alt=""/>
-					</div>
-				</div>
-				<div className="user-specs">
-					<h3>John Doe</h3>
-					<span>Graphic Designer at Self Employed</span>
-				</div>
+            <div class="job_descp">
+                <h3>{this.props.post.titulo}</h3>
+					<ul class="job-dt">
+						<li><a href="#" title="">Full Time</a></li>
+						<li><span>$30 / hr</span></li>
+					</ul>
+				<p>{this.props.post.description}<a href="#" title="">view more</a></p>
+					
 			</div>
         );
-    }
+      }
 }
 
-export default UserProfile;
+export default PostDescription;

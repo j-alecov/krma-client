@@ -18,7 +18,7 @@ class PostButtonTop extends React.Component{
 
     render(){
         return (
-            <div class="post-st">
+            <div className="post-st">
 				<ul>
 					<li><a className="post-jb active" href="#" title="">Ask for a favor!</a></li>
 				</ul>
