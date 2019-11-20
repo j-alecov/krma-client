@@ -13,13 +13,20 @@ import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
 
+import Tag from './Tag'
+
 
 class TagList extends React.Component{
     //map each tag to a li element
+    tags(){
+        return this.props.tags.map(function(tag) {
+            return <Tag tag={tag}/>
+        });
+    }
     render() {
         return (
             <ul class="skill-tags">
-                <li><a href="#" title="">{this.props.tag}</a></li>
+                {this.tags()}
 			</ul>
         );
       }

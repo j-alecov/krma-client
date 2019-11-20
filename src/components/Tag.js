@@ -12,27 +12,14 @@ import './../html/css/line-awesome.min.css'
 import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
-import PostHeader from './PostHeader';
-import PostMidSection from './PostMidSection';
-import PostDescription from './PostDescription';
-import TagList from './TagList';
 
 
-class Post extends React.Component{
-
-    //Kinda like this, just unpack the props send the comment props down
+class Tag extends React.Component{
     render() {
         return (
-          <div className="posty">
-            <div className="post-bar no-margin">
-              <PostHeader post={this.props.post}/>
-              <PostMidSection rango={this.props.post.rango}/>
-              <PostDescription post={this.props.post}/>
-              <TagList/>
-            </div>
-        </div>
+                <li><a href="#" title="">{this.props.tag}</a></li>
         );
       }
 }
 
-export default Post;
+export default Tag;
