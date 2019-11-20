@@ -26,9 +26,9 @@ class Post extends React.Component{
           <div className="posty">
             <div className="post-bar no-margin">
               <PostHeader post={this.props.post}/>
-              <PostMidSection rango={this.props.post.rango}/>
+              <PostMidSection rango={this.props.post.dificultad}/>
               <PostDescription post={this.props.post}/>
-              <TagList/>
+              <TagList tags={this.props.post.tags.split(',')}/>
             </div>
         </div>
         );

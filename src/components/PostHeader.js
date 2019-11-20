@@ -23,14 +23,14 @@ class PostHeader extends React.Component{
             <div className="usy-dt">
                 <img src="http://via.placeholder.com/50x50" alt=""></img>
                 <div className="usy-name">
-                    <h3>{this.props.post.name}</h3>
+                    <h3>{this.props.post.autor.nombre}</h3>
                     <span>
-                        <img src="images/clock.png" alt=""/>{this.props.post.date}
+                        <img src="images/clock.png" alt=""/>{this.props.post.fecha_creacion}
                     </span>
                 </div>
-                <div class="ed-opts">
-					<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-					<ul class="ed-options">
+                <div className="ed-opts">
+					<a href="#" title="" className="ed-opts-open"><i className="la la-ellipsis-v"></i></a>
+					<ul className="ed-options">
 						<li><a href="#" title="">Edit Post</a></li>
 						<li><a href="#" title="">Unsaved</a></li>
 						<li><a href="#" title="">Unbid</a></li>

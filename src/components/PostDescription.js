@@ -18,13 +18,13 @@ class PostDescription extends React.Component{
 
     render() {
         return (
-            <div class="job_descp">
+            <div className="job_descp">
                 <h3>{this.props.post.titulo}</h3>
-					<ul class="job-dt">
-						<li><a href="#" title="">Full Time</a></li>
-						<li><span>$30 / hr</span></li>
+					<ul className="job-dt">
+                <li><a href="#" title="">{this.props.post.tiempo} hrs</a></li>
+						<li><span>{this.props.post.puntos} krma</span></li>
 					</ul>
-				<p>{this.props.post.description}<a href="#" title="">view more</a></p>
+				<p>{this.props.post.descripcion}<br/><a href="#" title="">view more</a></p>
 					
 			</div>
         );

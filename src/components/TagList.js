@@ -25,7 +25,7 @@ class TagList extends React.Component{
     }
     render() {
         return (
-            <ul class="skill-tags">
+            <ul className="skill-tags">
                 {this.tags()}
 			</ul>
         );

@@ -12,15 +12,16 @@ import './../html/css/line-awesome.min.css'
 import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
+import icon8 from "./../html/images/icon8.png";
 
 
 class PostMidSection extends React.Component{
 
     render() {
         return (
-            <div class="epi-sec">
-				<ul class="descp">
-					<li><img src="images/icon8.png" alt=""/><span>{this.props.rango}</span></li>
+            <div className="epi-sec">
+				<ul className="descp">
+					<li><img src={icon8} alt=""/><span>Dificultad: {this.props.rango}</span></li>
 				</ul>
 			</div>
         );
