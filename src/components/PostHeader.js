@@ -12,6 +12,7 @@ import './../html/css/line-awesome.min.css'
 import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
+import clock from "./../html/images/clock.png";
 
 
 class PostHeader extends React.Component{
@@ -23,9 +24,9 @@ class PostHeader extends React.Component{
             <div className="usy-dt">
                 <img src="http://via.placeholder.com/50x50" alt=""></img>
                 <div className="usy-name">
-                    <h3>{this.props.post.autor.nombre}</h3>
+                    <h3>{this.props.post.autor.username}</h3>
                     <span>
-                        <img src="images/clock.png" alt=""/>{this.props.post.fecha_creacion}
+                        <img src={clock} alt=""/>{this.props.post.fecha_creacion}
                     </span>
                 </div>
                 <div className="ed-opts">

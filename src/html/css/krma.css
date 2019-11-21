@@ -1,0 +1,13 @@
+#button {
+    float: center;
+    color: #fff;
+    background-color: #ff6f00;
+    height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    border: 0;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}

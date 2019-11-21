@@ -1,11 +1,22 @@
 import React, {Component} from 'react';
-import './Style.css';
+import './../html/css/animate.css'
+import './../html/css/bootstrap.min.css'
+import './../html/css/flatpickr.min.css'
+import './../html/css/font-awesome.min.css'
+//import './../html/css/jquery.mCustomScrollbar.min.css'
+import './../html/css/jquery.range.css'
+import './../html/css/line-awesome-font-awesome.css'
+import './../html/css/line-awesome-font-awesome.min.css'
+import './../html/css/line-awesome.css'
+import './../html/css/line-awesome.min.css'
+import './../html/css/mystyle.css'
+import './../html/css/responsive.css'
+import './../html/css/style.css'
 
 class CommentForm extends Component{
     constructor(props){
         super(props);
         this.state = {
-            author: '',
             text:''
         }
         this.handleChange = this.handleChange.bind(this);
@@ -31,18 +42,14 @@ class CommentForm extends Component{
             
             this.props.saveComment(comment);
             
-            this.setState({author : ''});
             this.setState({text : ''});
     }
     render() {
         return (
         <div className="post-comment">
-            <div className="comment-box">
+            <div className="comment_box">
                 <form onSubmit={this.handleSubmit}>
-                    <input name="author" value={this.state.author} type="text" placeholder="Author" onChange={this.handleChange}/>
-                    <br />
-                    <textarea  name="text" value={this.state.text} rows="3" placeholder="Post a comment" onChange={this.handleChange}></textarea>
-                    <br />
+                    <input  name="text" value={this.state.text} type="text" placeholder="Post a comment" onChange={this.handleChange}/>
                     <button type="submit">Send</button>
                 </form>
             </div>

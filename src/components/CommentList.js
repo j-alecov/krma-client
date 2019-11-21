@@ -4,7 +4,7 @@ import Comment from './Comment';
 class CommentList extends Component{
     comments(){
         return this.props.comments.map(function(comment) {
-            return <Comment key={comment.response_id} comment={comment}/>
+            return <Comment key={comment.id} comment={comment}/>
         });
     }
     render() {

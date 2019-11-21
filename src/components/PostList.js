@@ -23,7 +23,7 @@ class PostList extends React.Component{
             posts: [
                 {
                     "id": 1,
-                    "titulo": "Whatever",
+                    "titulo": "Ayudame a mudarme",
                     "descripcion": "Porfavor no hagas lo de mi nombre",
                     "puntos": "30",
                     "estado": "Open",

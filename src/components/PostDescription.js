@@ -12,6 +12,7 @@ import './../html/css/line-awesome.min.css'
 import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
+import TagList from './TagList';
 
 
 class PostDescription extends React.Component{
@@ -25,7 +26,7 @@ class PostDescription extends React.Component{
 						<li><span>{this.props.post.puntos} krma</span></li>
 					</ul>
 				<p>{this.props.post.descripcion}<br/><a href="#" title="">view more</a></p>
-					
+                <TagList tags={this.props.post.tags.split(',')}/>
 			</div>
         );
       }

@@ -20,12 +20,12 @@ class UserFollowerStatus extends React.Component{
         return (
             <ul className="user-fw-status">
 				<li>
-					<h4>krma Points</h4>
-					<span>34</span>
+					<h4>krma</h4>
+					<span>{this.props.user.puntos}</span>
 				</li>
 				<li>
 					<h4>Followers</h4>
-					<span>155</span>
+					<span>{this.props.user.followers.length}</span>
 				</li>
 				<li>
 					<a href="#" title="">View Profile</a>

@@ -15,7 +15,7 @@ import './../html/css/style.css'
 import PostHeader from './PostHeader';
 import PostMidSection from './PostMidSection';
 import PostDescription from './PostDescription';
-import TagList from './TagList';
+import CommentSection from './CommentSection';
 
 
 class Post extends React.Component{
@@ -26,9 +26,9 @@ class Post extends React.Component{
           <div className="posty">
             <div className="post-bar no-margin">
               <PostHeader post={this.props.post}/>
-              <PostMidSection rango={this.props.post.dificultad}/>
+              <PostMidSection post={this.props.post}/>
               <PostDescription post={this.props.post}/>
-              <TagList tags={this.props.post.tags.split(',')}/>
+              <CommentSection/>
             </div>
         </div>
         );

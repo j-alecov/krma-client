@@ -25,8 +25,8 @@ class UserProfile extends React.Component{
 					</div>
 				</div>
 				<div className="user-specs">
-					<h3>John Doe</h3>
-					<span>Graphic Designer at Self Employed</span>
+				<h3>{this.props.user.nombre}</h3>
+				<span>Rank: {this.props.user.rango}</span>
 				</div>
 			</div>
         );

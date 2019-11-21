@@ -13,6 +13,7 @@ import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
 import icon8 from "./../html/images/icon8.png";
+import icon9  from "./../html/images/icon9.png";
 
 
 class PostMidSection extends React.Component{
@@ -21,7 +22,8 @@ class PostMidSection extends React.Component{
         return (
             <div className="epi-sec">
 				<ul className="descp">
-					<li><img src={icon8} alt=""/><span>Dificultad: {this.props.rango}</span></li>
+					<li><img src={icon8} alt=""/><span>Dificultad: {this.props.post.dificultad}</span></li>
+                    <li><img src={icon9} alt=""/><span>{this.props.post.ubicacion}</span></li>
 				</ul>
 			</div>
         );
