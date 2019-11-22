@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 import './../html/css/animate.css'
 import './../html/css/bootstrap.min.css'
 import './../html/css/flatpickr.min.css'
@@ -14,7 +13,6 @@ import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
 import PostTopbar from './PostTopbar';
-import PostForm from './PostForm';
 import PostList from './PostList';
 
 

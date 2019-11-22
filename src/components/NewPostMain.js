@@ -12,27 +12,26 @@ import './../html/css/line-awesome.min.css'
 import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
+import UserSummary from './UserSummary';
+import PostForm from './PostForm';
 
 
-class UserFollowerStatus extends React.Component{
+class NewPostMain extends React.Component{
 
     render(){
         return (
-            <ul className="user-fw-status">
-				<li>
-					<h4>krma</h4>
-					<span>{this.props.user.puntos}</span>
-				</li>
-				<li>
-					<h4>Followers</h4>
-					<span>0</span>
-				</li>
-				<li>
-					<a href="#" title="">View Profile</a>
-				</li>
-			</ul>
+            <div className="main-section">
+                 <div className="container">
+                    <div className="main-section-data">
+                        <div className="row">
+                            <UserSummary/>
+                            <PostForm/>
+                        </div>
+                    </div>
+                 </div>
+            </div>
         );
     }
 }
 
-export default UserFollowerStatus;
+export default NewPostMain;

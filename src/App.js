@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
+import NewPostPage from './components/NewPostPage';
+import LandingPage from './components/LandingPage';
 import './App.css';
 import './html/css/animate.css'
 import './html/css/bootstrap.min.css'
@@ -19,7 +21,9 @@ import './html/css/style.css'
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/home" component={HomePage} />
+      <Route exact path="/post" component={NewPostPage} />
+      <Route exact path="/" component={LandingPage} />
     </Switch>
   );
 }

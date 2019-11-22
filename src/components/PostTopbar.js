@@ -18,24 +18,6 @@ import PostButtonTop from './PostButtonTop';
 
 
 class PostTopbar extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          isShow: false           
-        };
-      }
-      toggleShow = () => {
-        this.setState(state => ({ isShow: !state.isShow }));
-      };
-      savePost = (post)=>{
-        //format the JSON post object for API consumption
-        let params = {
-          name: post.author,
-          response_content: post.text
-        }
-       Axios.post('/api/posts/', params)
-       .then(res => console.log(res.data));
-     }
     render(){
         return (
             <div className="post-topbar">

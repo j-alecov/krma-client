@@ -13,6 +13,9 @@ import './../html/css/mystyle.css'
 import './../html/css/responsive.css'
 import './../html/css/style.css'
 import './../html/css/krma.css'
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
+
 
 class PostForm extends Component{
     constructor(props){
@@ -21,7 +24,6 @@ class PostForm extends Component{
             titulo:'',
             descripcion: '',
             puntos: 0,
-            estado: '',
             ubicacion: '',
             dificultad: '',
             deadLine: '',
@@ -31,6 +33,15 @@ class PostForm extends Component{
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    savePost = (post)=>{
+        //format the JSON post object for API consumption
+        let params = {
+          name: post.author,
+          response_content: post.text
+        }
+       Axios.post('http://env-1474631.jl.serv.net.mx/api/posts', params)
+       .then(res => console.log(res.data));
+     }
     handleChange(event) {
         const target = event.target;
         const value =  target.value;
@@ -44,14 +55,29 @@ class PostForm extends Component{
         e.preventDefault();
 
             var post = {
-                author: this.state.author,
-                text: this.state.text,
-                post: this.props.post
+                titulo: this.state.titulo,
+                descripcion: this.state.descripcion,
+                puntos: this.state.puntos,
+                estado: 'Open',
+                ubicacion: this.state.ubicacion,
+                dificultad: this.state.dificultad,
+                deadLine: this.state.deadLine,
+                tiempo: this.state.tiempo,
+                tags: this.state.tags 
             };
             
-            this.props.savePost(post);
+            this.savePost(post);
             
-            this.setState({text : ''});
+            this.setState({
+                titulo:'',
+                descripcion: '',
+                puntos: 0,
+                ubicacion: '',
+                dificultad: '',
+                deadLine: '',
+                tiempo: '',
+                tags: ''
+        });
     }
     render() {
         return (
@@ -97,16 +123,12 @@ class PostForm extends Component{
 							<div className="col-lg-12">
 								<ul>
 									<li><button className="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
+									<li><Link to="/home">Cancel</Link></li>
 								</ul>
 							</div>
 						</div>
 					</form>
 				</div>
-                <form onSubmit={this.handleSubmit}>
-                    <input  name="text" value={this.state.text} type="text" placeholder="Post a comment" onChange={this.handleChange}/>
-                    <button type="submit">Send</button>
-                </form>
             </div>
         </div>
         

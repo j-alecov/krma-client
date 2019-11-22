@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './../html/css/animate.css'
 import './../html/css/bootstrap.min.css'
 import './../html/css/flatpickr.min.css'
@@ -20,7 +21,7 @@ class PostButtonTop extends React.Component{
         return (
             <div className="post-st">
 				<ul>
-					<li><a className="post-jb active" href="#" title="">Ask for a favor!</a></li>
+					<li><Link className="post-jb active" to="/post">Ask for a favor!</Link></li>
 				</ul>
 			</div>
         );
